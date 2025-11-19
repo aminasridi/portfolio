@@ -1,16 +1,217 @@
-{% extends 'base.html' %}
-{% block title %}Accueil - Mon Portfolio{% endblock %}
-{% block content %}
-<h1>Bonjour, je suis Flen Foulen</h1>
-<p>Ingénieur logiciel passionné par l’IA, le web et la data.</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amina Sridi - Portfolio</title>
 
-<h2>Mes Projets</h2>
-<ul>
-    <li>🔍 Application de scraping hôtelier</li>
-    <li>🤖 Chatbot intelligent avec LangChain</li>
-    <li>📊 Visualisation de données agricoles</li>
-</ul>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
+        crossorigin="anonymous" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<h2>Compétences</h2>
-<p>Python, Flask, Angular, .NET, Pandas, CSPro, LangChain...</p>
-{% endblock %}
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">Amina Sridi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Éducation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificats</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="vh-100 d-flex align-items-center bg-light">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Amina Sridi</h1>
+    <p class="lead mb-4">Ingénieure en Intelligence Artificielle & Développeuse Logiciel</p>
+    <img src="static/images/moi.jpg" alt="Photo de amina" class="profile-img">
+    <div>
+      <a href="#contact" class="btn btn-primary btn-lg me-2">Contactez-moi</a>
+      <a href="https://github.com/aminasridi" target="_blank" class="btn btn-outline-primary btn-lg">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="mb-4 text-center">À propos de moi</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+          Ingénieure principale à l’Institut National de Statistique Tunisie, passionnée par l’intelligence artificielle,
+          le machine learning et le développement d’applications innovantes. Forte d’une expérience dans le développement
+          de chatbots intelligents et la collecte automatisée de données, je suis toujours prête à relever de nouveaux défis.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h5>Compétences</h5>
+        <ul>
+          <li><strong>Langages de programmation :</strong> C#, Python, Java, JavaScript</li>
+          <li><strong>Bases de données :</strong> PostgreSQL, MySQL, MongoDB</li>
+          <li><strong>Frameworks :</strong> Flask, .NET, Angular</li>
+          <li><strong>Méthodes de développement :</strong> PU, CRISP-DM</li>
+          <li><strong>Langues :</strong> Arabe (natif), Français (très bon), Anglais (moyen), Espagnol (élémentaire)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Expériences professionnelles</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <h5>Ingénieure principale — Institut National de Statistique Tunisie</h5>
+        <span class="text-muted">mars 2023 – présent</span>
+        <ul>
+          <li>Développement d’un chatbot WhatsApp intelligent basé sur les LLM.</li>
+          <li>Automatisation de la collecte de données web avec Python.</li>
+          <li>Conception de modèles de classification de texte via Machine Learning.</li>
+          <li>Mise en œuvre d’enquêtes terrain avec CSPro et formation des agents.</li>
+          <li>Responsable régionale de suivi des formations.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h5>Développement DotNet — Freelance</h5>
+        <span class="text-muted">sept. 2021 – juin 2022</span>
+        <ul>
+          <li>Création d’une application desktop de gestion commerciale (Dev Express, SQL Server, .NET).</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h5>Stage PFE — ENOVA ROBOTICS</h5>
+        <span class="text-muted">février – juin 2021</span>
+        <ul>
+          <li>Développement d’une bibliothèque ciblée aux développeurs .NET.</li>
+          <li>Plugin pour commander le robot P-Guard via VMS Milestone.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h5>Enseignante informatique — Ecole ENNOUR</h5>
+        <span class="text-muted">sept. 2018 – juin 2020</span>
+        <ul>
+          <li>Résolution de problèmes logiques via programmation.</li>
+          <li>Production de programmes avec différents langages.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h5>Stage PFE — DORMAL CORP</h5>
+        <span class="text-muted">février – juillet 2018</span>
+        <ul>
+          <li>Conception et développement d’une plateforme de recrutement (Angular, Symfony, Rest API).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="mb-4 text-center">Éducation</h2>
+    <ul>
+      <li><strong>Diplôme nationale d’ingénieur en téléinformatique</strong> – 2021<br/>
+        ISITCom Hammam Sousse
+      </li>
+      <li><strong>Licence fondamentale en sciences de l’informatique</strong> – 2018<br/>
+        ISSAT Sousse
+      </li>
+      <li><strong>Baccalauréat en sciences techniques</strong> – 2015<br/>
+        Lycée secondaire Hammam Sousse 2
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Certificats</h2>
+    <ul>
+      <li><strong>IBM :</strong> Maîtrise Analyste en Intelligence Artificielle</li>
+      <li><strong>NVIDIA :</strong> Fondamentaux de « Deep Learning » en « Computer Vision »</li>
+      <li><strong>DataCamp :</strong> Cleaning data in Python, Cluster analytic in Python</li>
+      <li><strong>Microsoft Technology Associate :</strong> Introduction to Programming</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="mb-4 text-center">Projets académiques</h2>
+    <ul>
+      <li>Développement d’un modèle de régression avec Python, Scikit-Learn et Flask</li>
+      <li>Développement d’un « Help Desk Chatbot » sur IBM Cloud</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Contactez-moi</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" placeholder="Votre nom" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse e-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="Votre email" value="amina.sridi14@gmail.com" />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Votre message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <p><i class="fas fa-phone"></i> (+216) 51 711 755</p>
+      <p><i class="fas fa-map-marker-alt"></i> Kalaa Sghira, Sousse, Tunisie</p>
+      <p><i class="fas fa-envelope"></i> amina.sridi14@gmail.com</p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/aminasridi" target="_blank">github.com/aminasridi</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Cp8jRg/HBL7JkZvfhz5i+j6LtDxWt1rmE4WmwoV1rR6x6LPb7jTyXriFwK6v9y2R" crossorigin="anonymous"></script>
+</body>
+</html>
